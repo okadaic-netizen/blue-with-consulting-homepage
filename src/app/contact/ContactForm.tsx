@@ -22,6 +22,7 @@ export default function ContactForm() {
     const formData = new FormData(e.currentTarget);
     const payload = Object.fromEntries(formData.entries());
 
+    const form = e.currentTarget;
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -30,8 +31,9 @@ export default function ContactForm() {
       });
       if (!res.ok) throw new Error("failed");
       setStatus("sent");
-      e.currentTarget.reset();
-    } catch {
+      form.reset();
+    } catch (err) {
+      console.error("Contact form submission failed:", err);
       setStatus("error");
     }
   }
