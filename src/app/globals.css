@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy: #17375e;
+  --color-blue: #1e5aa8;
+  --color-support-blue: #4e8dd9;
+  --color-green: #2e8b57;
+  --color-orange: #f28c28;
+  --color-red: #c73e3a;
+  --color-teal: #2c7a7b;
+  --color-gray-light: #f5f7fa;
+  --color-gray-medium: #b8c2cc;
+  --color-gray-dark: #4a5568;
+
+  --background: #ffffff;
+  --foreground: var(--color-gray-dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--color-navy);
+  --color-blue: var(--color-blue);
+  --color-support-blue: var(--color-support-blue);
+  --color-green: var(--color-green);
+  --color-orange: var(--color-orange);
+  --color-red: var(--color-red);
+  --color-teal: var(--color-teal);
+  --color-gray-light: var(--color-gray-light);
+  --color-gray-medium: var(--color-gray-medium);
+  --color-gray-dark: var(--color-gray-dark);
+  --font-heading: var(--font-montserrat);
+  --font-body: var(--font-noto-sans-jp);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "BIZ UDPGothic", "Noto Sans JP", sans-serif;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading), "Montserrat", sans-serif;
+}
