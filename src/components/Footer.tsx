@@ -11,7 +11,7 @@ export default function Footer() {
               src="/logo/reverse-logo.png"
               alt="Blue With Consulting"
               width={180}
-              height={138}
+              height={123}
               className="h-12 w-auto"
             />
             <p className="mt-3 text-sm text-gray-medium">
